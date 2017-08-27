@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9437CFAA1F52DE7E00601918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437CFA91F52DE7E00601918 /* AppDelegate.swift */; };
+		9437CFAC1F52DE7E00601918 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437CFAB1F52DE7E00601918 /* ViewController.swift */; };
+		9437CFAF1F52DE7E00601918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9437CFAD1F52DE7E00601918 /* Main.storyboard */; };
+		9437CFB11F52DE7E00601918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9437CFB01F52DE7E00601918 /* Assets.xcassets */; };
+		9437CFB41F52DE7E00601918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9437CFB21F52DE7E00601918 /* LaunchScreen.storyboard */; };
+		9437CFBF1F52DE7F00601918 /* MiniMartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437CFBE1F52DE7F00601918 /* MiniMartTests.swift */; };
+		9437CFCA1F52DE7F00601918 /* MiniMartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437CFC91F52DE7F00601918 /* MiniMartUITests.swift */; };
+		95D4CA0B7B9242CA8CCBD1B5 /* Pods_MiniMart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6AF108CB863BDF46C45DB1 /* Pods_MiniMart.framework */; };
+		F3D58044DDA2D44A74721A6D /* Pods_MiniMartUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8670A778D7B1119833330D4 /* Pods_MiniMartUITests.framework */; };
+		FDD8C4449765E6E5EB8A5AF3 /* Pods_MiniMartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A882321FAA6BF1B53B8F56B9 /* Pods_MiniMartTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9437CFBB1F52DE7F00601918 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9437CF9E1F52DE7E00601918 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9437CFA51F52DE7E00601918;
+			remoteInfo = MiniMart;
+		};
+		9437CFC61F52DE7F00601918 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9437CF9E1F52DE7E00601918 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9437CFA51F52DE7E00601918;
+			remoteInfo = MiniMart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F61417FC7A4AFFD37E0D440 /* Pods-MiniMart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniMart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniMart/Pods-MiniMart.debug.xcconfig"; sourceTree = "<group>"; };
+		4104D1ADE71F8E38AF382CBD /* Pods-MiniMartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniMartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniMartTests/Pods-MiniMartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D0833E52F5CAF8A1CE78F18 /* Pods-MiniMartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniMartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniMartTests/Pods-MiniMartTests.release.xcconfig"; sourceTree = "<group>"; };
+		626D295DB78EF7A544445FD6 /* Pods-MiniMart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniMart.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniMart/Pods-MiniMart.release.xcconfig"; sourceTree = "<group>"; };
+		6DB98A3003361BFCFF4E54F7 /* Pods-MiniMartUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniMartUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniMartUITests/Pods-MiniMartUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F40EED759B4419A23B710A1 /* Pods-MiniMartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniMartUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniMartUITests/Pods-MiniMartUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9437CFA61F52DE7E00601918 /* MiniMart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniMart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9437CFA91F52DE7E00601918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9437CFAB1F52DE7E00601918 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9437CFAE1F52DE7E00601918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9437CFB01F52DE7E00601918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9437CFB31F52DE7E00601918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9437CFB51F52DE7E00601918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9437CFBA1F52DE7F00601918 /* MiniMartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniMartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9437CFBE1F52DE7F00601918 /* MiniMartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMartTests.swift; sourceTree = "<group>"; };
+		9437CFC01F52DE7F00601918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9437CFC51F52DE7F00601918 /* MiniMartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniMartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9437CFC91F52DE7F00601918 /* MiniMartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMartUITests.swift; sourceTree = "<group>"; };
+		9437CFCB1F52DE7F00601918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A882321FAA6BF1B53B8F56B9 /* Pods_MiniMartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniMartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6AF108CB863BDF46C45DB1 /* Pods_MiniMart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniMart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8670A778D7B1119833330D4 /* Pods_MiniMartUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniMartUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9437CFA31F52DE7E00601918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D4CA0B7B9242CA8CCBD1B5 /* Pods_MiniMart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9437CFB71F52DE7F00601918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDD8C4449765E6E5EB8A5AF3 /* Pods_MiniMartTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9437CFC21F52DE7F00601918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D58044DDA2D44A74721A6D /* Pods_MiniMartUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2745B49FCAFDF30CE1482CD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F61417FC7A4AFFD37E0D440 /* Pods-MiniMart.debug.xcconfig */,
+				626D295DB78EF7A544445FD6 /* Pods-MiniMart.release.xcconfig */,
+				4104D1ADE71F8E38AF382CBD /* Pods-MiniMartTests.debug.xcconfig */,
+				4D0833E52F5CAF8A1CE78F18 /* Pods-MiniMartTests.release.xcconfig */,
+				6DB98A3003361BFCFF4E54F7 /* Pods-MiniMartUITests.debug.xcconfig */,
+				7F40EED759B4419A23B710A1 /* Pods-MiniMartUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9437CF9D1F52DE7E00601918 = {
+			isa = PBXGroup;
+			children = (
+				9437CFA81F52DE7E00601918 /* MiniMart */,
+				9437CFBD1F52DE7F00601918 /* MiniMartTests */,
+				9437CFC81F52DE7F00601918 /* MiniMartUITests */,
+				9437CFA71F52DE7E00601918 /* Products */,
+				2745B49FCAFDF30CE1482CD2 /* Pods */,
+				F569240C2559D7D581FBAD6B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9437CFA71F52DE7E00601918 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9437CFA61F52DE7E00601918 /* MiniMart.app */,
+				9437CFBA1F52DE7F00601918 /* MiniMartTests.xctest */,
+				9437CFC51F52DE7F00601918 /* MiniMartUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9437CFA81F52DE7E00601918 /* MiniMart */ = {
+			isa = PBXGroup;
+			children = (
+				9437CFA91F52DE7E00601918 /* AppDelegate.swift */,
+				9437CFAB1F52DE7E00601918 /* ViewController.swift */,
+				9437CFAD1F52DE7E00601918 /* Main.storyboard */,
+				9437CFB01F52DE7E00601918 /* Assets.xcassets */,
+				9437CFB21F52DE7E00601918 /* LaunchScreen.storyboard */,
+				9437CFB51F52DE7E00601918 /* Info.plist */,
+			);
+			path = MiniMart;
+			sourceTree = "<group>";
+		};
+		9437CFBD1F52DE7F00601918 /* MiniMartTests */ = {
+			isa = PBXGroup;
+			children = (
+				9437CFBE1F52DE7F00601918 /* MiniMartTests.swift */,
+				9437CFC01F52DE7F00601918 /* Info.plist */,
+			);
+			path = MiniMartTests;
+			sourceTree = "<group>";
+		};
+		9437CFC81F52DE7F00601918 /* MiniMartUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9437CFC91F52DE7F00601918 /* MiniMartUITests.swift */,
+				9437CFCB1F52DE7F00601918 /* Info.plist */,
+			);
+			path = MiniMartUITests;
+			sourceTree = "<group>";
+		};
+		F569240C2559D7D581FBAD6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC6AF108CB863BDF46C45DB1 /* Pods_MiniMart.framework */,
+				A882321FAA6BF1B53B8F56B9 /* Pods_MiniMartTests.framework */,
+				C8670A778D7B1119833330D4 /* Pods_MiniMartUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9437CFA51F52DE7E00601918 /* MiniMart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9437CFCE1F52DE7F00601918 /* Build configuration list for PBXNativeTarget "MiniMart" */;
+			buildPhases = (
+				8350A21BB64DB25166C9DA67 /* [CP] Check Pods Manifest.lock */,
+				9437CFA21F52DE7E00601918 /* Sources */,
+				9437CFA31F52DE7E00601918 /* Frameworks */,
+				9437CFA41F52DE7E00601918 /* Resources */,
+				69D7B6762B0613857700F9C8 /* [CP] Embed Pods Frameworks */,
+				690DE5CF76945E0DEC03EB48 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiniMart;
+			productName = MiniMart;
+			productReference = 9437CFA61F52DE7E00601918 /* MiniMart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9437CFB91F52DE7F00601918 /* MiniMartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9437CFD11F52DE7F00601918 /* Build configuration list for PBXNativeTarget "MiniMartTests" */;
+			buildPhases = (
+				5D383F25B6AC6AB787DFDC7B /* [CP] Check Pods Manifest.lock */,
+				9437CFB61F52DE7F00601918 /* Sources */,
+				9437CFB71F52DE7F00601918 /* Frameworks */,
+				9437CFB81F52DE7F00601918 /* Resources */,
+				A31E02B146E9429CCC61FAFA /* [CP] Embed Pods Frameworks */,
+				6EF7C4CCEAC63E565C6CCD70 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9437CFBC1F52DE7F00601918 /* PBXTargetDependency */,
+			);
+			name = MiniMartTests;
+			productName = MiniMartTests;
+			productReference = 9437CFBA1F52DE7F00601918 /* MiniMartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9437CFC41F52DE7F00601918 /* MiniMartUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9437CFD41F52DE7F00601918 /* Build configuration list for PBXNativeTarget "MiniMartUITests" */;
+			buildPhases = (
+				9C032ACF3F660067E20F3BBF /* [CP] Check Pods Manifest.lock */,
+				9437CFC11F52DE7F00601918 /* Sources */,
+				9437CFC21F52DE7F00601918 /* Frameworks */,
+				9437CFC31F52DE7F00601918 /* Resources */,
+				D5E68D8B413D3BA8B1C561FA /* [CP] Embed Pods Frameworks */,
+				51D810254B56F6AF3F6C7D48 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9437CFC71F52DE7F00601918 /* PBXTargetDependency */,
+			);
+			name = MiniMartUITests;
+			productName = MiniMartUITests;
+			productReference = 9437CFC51F52DE7F00601918 /* MiniMartUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9437CF9E1F52DE7E00601918 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Spaceage Labs";
+				TargetAttributes = {
+					9437CFA51F52DE7E00601918 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					9437CFB91F52DE7F00601918 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9437CFA51F52DE7E00601918;
+					};
+					9437CFC41F52DE7F00601918 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9437CFA51F52DE7E00601918;
+					};
+				};
+			};
+			buildConfigurationList = 9437CFA11F52DE7E00601918 /* Build configuration list for PBXProject "MiniMart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9437CF9D1F52DE7E00601918;
+			productRefGroup = 9437CFA71F52DE7E00601918 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9437CFA51F52DE7E00601918 /* MiniMart */,
+				9437CFB91F52DE7F00601918 /* MiniMartTests */,
+				9437CFC41F52DE7F00601918 /* MiniMartUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9437CFA41F52DE7E00601918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9437CFB41F52DE7E00601918 /* LaunchScreen.storyboard in Resources */,
+				9437CFB11F52DE7E00601918 /* Assets.xcassets in Resources */,
+				9437CFAF1F52DE7E00601918 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9437CFB81F52DE7F00601918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9437CFC31F52DE7F00601918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51D810254B56F6AF3F6C7D48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiniMartUITests/Pods-MiniMartUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D383F25B6AC6AB787DFDC7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniMartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		690DE5CF76945E0DEC03EB48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiniMart/Pods-MiniMart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69D7B6762B0613857700F9C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MiniMart/Pods-MiniMart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiniMart/Pods-MiniMart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EF7C4CCEAC63E565C6CCD70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiniMartTests/Pods-MiniMartTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8350A21BB64DB25166C9DA67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniMart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C032ACF3F660067E20F3BBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniMartUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A31E02B146E9429CCC61FAFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiniMartTests/Pods-MiniMartTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5E68D8B413D3BA8B1C561FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiniMartUITests/Pods-MiniMartUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9437CFA21F52DE7E00601918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9437CFAC1F52DE7E00601918 /* ViewController.swift in Sources */,
+				9437CFAA1F52DE7E00601918 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9437CFB61F52DE7F00601918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9437CFBF1F52DE7F00601918 /* MiniMartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9437CFC11F52DE7F00601918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9437CFCA1F52DE7F00601918 /* MiniMartUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9437CFBC1F52DE7F00601918 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9437CFA51F52DE7E00601918 /* MiniMart */;
+			targetProxy = 9437CFBB1F52DE7F00601918 /* PBXContainerItemProxy */;
+		};
+		9437CFC71F52DE7F00601918 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9437CFA51F52DE7E00601918 /* MiniMart */;
+			targetProxy = 9437CFC61F52DE7F00601918 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9437CFAD1F52DE7E00601918 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9437CFAE1F52DE7E00601918 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9437CFB21F52DE7E00601918 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9437CFB31F52DE7E00601918 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9437CFCC1F52DE7F00601918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9437CFCD1F52DE7F00601918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9437CFCF1F52DE7F00601918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F61417FC7A4AFFD37E0D440 /* Pods-MiniMart.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MiniMart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = spaceagelabs.com.MiniMart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9437CFD01F52DE7F00601918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 626D295DB78EF7A544445FD6 /* Pods-MiniMart.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MiniMart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = spaceagelabs.com.MiniMart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9437CFD21F52DE7F00601918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4104D1ADE71F8E38AF382CBD /* Pods-MiniMartTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MiniMartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = spaceagelabs.com.MiniMartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniMart.app/MiniMart";
+			};
+			name = Debug;
+		};
+		9437CFD31F52DE7F00601918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0833E52F5CAF8A1CE78F18 /* Pods-MiniMartTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MiniMartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = spaceagelabs.com.MiniMartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniMart.app/MiniMart";
+			};
+			name = Release;
+		};
+		9437CFD51F52DE7F00601918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB98A3003361BFCFF4E54F7 /* Pods-MiniMartUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MiniMartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = spaceagelabs.com.MiniMartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MiniMart;
+			};
+			name = Debug;
+		};
+		9437CFD61F52DE7F00601918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F40EED759B4419A23B710A1 /* Pods-MiniMartUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MiniMartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = spaceagelabs.com.MiniMartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MiniMart;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9437CFA11F52DE7E00601918 /* Build configuration list for PBXProject "MiniMart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9437CFCC1F52DE7F00601918 /* Debug */,
+				9437CFCD1F52DE7F00601918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9437CFCE1F52DE7F00601918 /* Build configuration list for PBXNativeTarget "MiniMart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9437CFCF1F52DE7F00601918 /* Debug */,
+				9437CFD01F52DE7F00601918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9437CFD11F52DE7F00601918 /* Build configuration list for PBXNativeTarget "MiniMartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9437CFD21F52DE7F00601918 /* Debug */,
+				9437CFD31F52DE7F00601918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9437CFD41F52DE7F00601918 /* Build configuration list for PBXNativeTarget "MiniMartUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9437CFD51F52DE7F00601918 /* Debug */,
+				9437CFD61F52DE7F00601918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9437CF9E1F52DE7E00601918 /* Project object */;
+}
