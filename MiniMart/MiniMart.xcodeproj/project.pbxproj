@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		9437CFAA1F52DE7E00601918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437CFA91F52DE7E00601918 /* AppDelegate.swift */; };
-		9437CFAC1F52DE7E00601918 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437CFAB1F52DE7E00601918 /* ViewController.swift */; };
+		9437CFAC1F52DE7E00601918 /* MartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437CFAB1F52DE7E00601918 /* MartViewController.swift */; };
 		9437CFAF1F52DE7E00601918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9437CFAD1F52DE7E00601918 /* Main.storyboard */; };
 		9437CFB11F52DE7E00601918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9437CFB01F52DE7E00601918 /* Assets.xcassets */; };
 		9437CFB41F52DE7E00601918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9437CFB21F52DE7E00601918 /* LaunchScreen.storyboard */; };
 		9437CFBF1F52DE7F00601918 /* MiniMartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437CFBE1F52DE7F00601918 /* MiniMartTests.swift */; };
 		9437CFCA1F52DE7F00601918 /* MiniMartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437CFC91F52DE7F00601918 /* MiniMartUITests.swift */; };
+		94A862041F53385C0099042F /* MartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A862031F53385C0099042F /* MartViewModel.swift */; };
+		94A862061F533E3C0099042F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A862051F533E3C0099042F /* Product.swift */; };
+		94A862081F53C7670099042F /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A862071F53C7670099042F /* ViewUtils.swift */; };
+		94A8620A1F53CA730099042F /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A862091F53CA730099042F /* CartItem.swift */; };
+		94A8620D1F53E88C0099042F /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8620C1F53E88C0099042F /* DBHelper.swift */; };
+		94A8620F1F53EEFA0099042F /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8620E1F53EEFA0099042F /* ProductViewModel.swift */; };
 		95D4CA0B7B9242CA8CCBD1B5 /* Pods_MiniMart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6AF108CB863BDF46C45DB1 /* Pods_MiniMart.framework */; };
 		F3D58044DDA2D44A74721A6D /* Pods_MiniMartUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8670A778D7B1119833330D4 /* Pods_MiniMartUITests.framework */; };
 		FDD8C4449765E6E5EB8A5AF3 /* Pods_MiniMartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A882321FAA6BF1B53B8F56B9 /* Pods_MiniMartTests.framework */; };
@@ -45,7 +51,7 @@
 		7F40EED759B4419A23B710A1 /* Pods-MiniMartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniMartUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniMartUITests/Pods-MiniMartUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9437CFA61F52DE7E00601918 /* MiniMart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniMart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9437CFA91F52DE7E00601918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9437CFAB1F52DE7E00601918 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9437CFAB1F52DE7E00601918 /* MartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartViewController.swift; sourceTree = "<group>"; };
 		9437CFAE1F52DE7E00601918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9437CFB01F52DE7E00601918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9437CFB31F52DE7E00601918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +62,12 @@
 		9437CFC51F52DE7F00601918 /* MiniMartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniMartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9437CFC91F52DE7F00601918 /* MiniMartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMartUITests.swift; sourceTree = "<group>"; };
 		9437CFCB1F52DE7F00601918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94A862031F53385C0099042F /* MartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MartViewModel.swift; sourceTree = "<group>"; };
+		94A862051F533E3C0099042F /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		94A862071F53C7670099042F /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		94A862091F53CA730099042F /* CartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		94A8620C1F53E88C0099042F /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		94A8620E1F53EEFA0099042F /* ProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		A882321FAA6BF1B53B8F56B9 /* Pods_MiniMartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniMartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6AF108CB863BDF46C45DB1 /* Pods_MiniMart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniMart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8670A778D7B1119833330D4 /* Pods_MiniMartUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniMartUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,11 +139,14 @@
 		9437CFA81F52DE7E00601918 /* MiniMart */ = {
 			isa = PBXGroup;
 			children = (
-				9437CFA91F52DE7E00601918 /* AppDelegate.swift */,
-				9437CFAB1F52DE7E00601918 /* ViewController.swift */,
-				9437CFAD1F52DE7E00601918 /* Main.storyboard */,
-				9437CFB01F52DE7E00601918 /* Assets.xcassets */,
 				9437CFB21F52DE7E00601918 /* LaunchScreen.storyboard */,
+				9437CFA91F52DE7E00601918 /* AppDelegate.swift */,
+				9437CFAD1F52DE7E00601918 /* Main.storyboard */,
+				94A862001F5321880099042F /* Views */,
+				94A862011F5321920099042F /* ViewModels */,
+				94A862021F5321A70099042F /* Models */,
+				94A8620B1F53E8750099042F /* Service */,
+				9437CFB01F52DE7E00601918 /* Assets.xcassets */,
 				9437CFB51F52DE7E00601918 /* Info.plist */,
 			);
 			path = MiniMart;
@@ -153,6 +168,41 @@
 				9437CFCB1F52DE7F00601918 /* Info.plist */,
 			);
 			path = MiniMartUITests;
+			sourceTree = "<group>";
+		};
+		94A862001F5321880099042F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9437CFAB1F52DE7E00601918 /* MartViewController.swift */,
+				94A862071F53C7670099042F /* ViewUtils.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		94A862011F5321920099042F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				94A862031F53385C0099042F /* MartViewModel.swift */,
+				94A8620E1F53EEFA0099042F /* ProductViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		94A862021F5321A70099042F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94A862051F533E3C0099042F /* Product.swift */,
+				94A862091F53CA730099042F /* CartItem.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		94A8620B1F53E8750099042F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				94A8620C1F53E88C0099042F /* DBHelper.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		F569240C2559D7D581FBAD6B /* Frameworks */ = {
@@ -462,7 +512,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9437CFAC1F52DE7E00601918 /* ViewController.swift in Sources */,
+				94A862041F53385C0099042F /* MartViewModel.swift in Sources */,
+				94A862081F53C7670099042F /* ViewUtils.swift in Sources */,
+				94A862061F533E3C0099042F /* Product.swift in Sources */,
+				94A8620D1F53E88C0099042F /* DBHelper.swift in Sources */,
+				9437CFAC1F52DE7E00601918 /* MartViewController.swift in Sources */,
+				94A8620A1F53CA730099042F /* CartItem.swift in Sources */,
+				94A8620F1F53EEFA0099042F /* ProductViewModel.swift in Sources */,
 				9437CFAA1F52DE7E00601918 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,6 +770,7 @@
 				9437CFD01F52DE7F00601918 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9437CFD11F52DE7F00601918 /* Build configuration list for PBXNativeTarget "MiniMartTests" */ = {
 			isa = XCConfigurationList;
@@ -722,6 +779,7 @@
 				9437CFD31F52DE7F00601918 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9437CFD41F52DE7F00601918 /* Build configuration list for PBXNativeTarget "MiniMartUITests" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +788,7 @@
 				9437CFD61F52DE7F00601918 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
