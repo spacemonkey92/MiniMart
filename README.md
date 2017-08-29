@@ -7,7 +7,7 @@ A simple iOS shopping app with a selected list of items.
 3. RxSwift (Reactive)
 
 
-## Use case
+## Use cases
 1. View Products 
 2. Add Products to Cart 
 3. Remove Products from cart
@@ -16,13 +16,13 @@ A simple iOS shopping app with a selected list of items.
 6. Checkout
 
 ## UI
-The has a total of 2 Major screen (Sketch File Attached)
-1. Products List
-2. Cart (Integrated Checkout)
+The app has a total of 2 Major screen (Sketch File Attached)
+1. View Products List
+2. View Cart (Integrated Checkout)
 
 
 ## Product Architecture : MVVM 
-This project is build on MVVM architecture leveraging on RxSwift’s reactive programming.  The “View” and “ViewModel” binding is done with RxSwift and persisting the Model data into SQLite is done with SQLite.Swift frame work 
+This project is build on MVVM architecture leveraging on RxSwift’s reactive programming. The “View” and “ViewModel” binding is done with RxSwift and persisting the "Model" data into SQLite is done with SQLite.Swift framework 
 
 The major Components of the Project are 
 
