@@ -10,7 +10,7 @@ import Foundation
 
 struct CartItem {
     
-    let product:Product
+    let productId:String
     let quantity: Int
     
     

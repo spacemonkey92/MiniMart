@@ -37,14 +37,25 @@ class ProductViewModel : Equatable, Hashable {
         self.cartQuantity.value = self.cartQuantity.value - 1
     }
     
-    func getPrice() -> Float{
-        return product.price * Float(cartQuantity.value)
+    func getPrice() -> Double{
+        return product.price * Double(cartQuantity.value)
     }
     
     func getPricePretty() -> String {
         let price = String(format: "%.2f", getPrice())
         return "$\(price)"
     }
+    
+    func getPriceDetails() ->String{
+        return "\(cartQuantity.value) x \(getPricePretty())"
+    }
+    
+    func getProductPricePretty() -> String {
+        let price = String(format: "%.2f", product.price)
+        return "$\(price)"
+    }
+
+    
     
     var hashValue: Int {
         get {

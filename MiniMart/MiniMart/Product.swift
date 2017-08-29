@@ -15,7 +15,7 @@ import Foundation
 struct Product: Equatable {
     
     let id:String
-    let price: Float
+    let price: Double
     let name: String
     let description: String
     let image : Data?

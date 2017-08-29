@@ -7,10 +7,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Mart View Controller-->
+        <!--GROCERIES-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MartViewController" customModule="MiniMart" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3uR-pu-ND6">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qUd-72-Piw">
                                     <size key="itemSize" width="50" height="50"/>
@@ -31,43 +32,124 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ofx-c2-U6r">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="3uR-pu-ND6" secondAttribute="trailing" id="WsU-5t-MiK"/>
+                            <constraint firstAttribute="trailing" secondItem="3uR-pu-ND6" secondAttribute="trailing" id="WsU-5t-MiK"/>
                             <constraint firstItem="3uR-pu-ND6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="YWB-NG-LGv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3uR-pu-ND6" secondAttribute="bottom" id="Z2G-b5-E4E"/>
-                            <constraint firstItem="3uR-pu-ND6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dqk-x1-NVV"/>
+                            <constraint firstItem="3uR-pu-ND6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dqk-x1-NVV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iMh-QM-jDi"/>
+                    <navigationItem key="navigationItem" title="GROCERIES" id="iMh-QM-jDi">
+                        <barButtonItem key="rightBarButtonItem" title="Cart" id="lhv-6n-JJu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="didClickCart:" destination="BYZ-38-t0r" id="eQj-4m-9HJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="cartBtn" destination="lhv-6n-JJu" id="9Fb-9S-wkU"/>
                         <outlet property="productsCollectionView" destination="3uR-pu-ND6" id="2ML-pK-EUy"/>
+                        <segue destination="pmp-Vm-HPN" kind="showDetail" identifier="viewCartSegue" id="koG-iT-y0H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="935" y="692"/>
         </scene>
+        <!--CART-->
+        <scene sceneID="RQ2-9r-ZuD">
+            <objects>
+                <viewController id="Gm3-EG-2n1" customClass="CartViewController" customModule="MiniMart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iqz-Fi-qMY"/>
+                        <viewControllerLayoutGuide type="bottom" id="KCH-dc-AO6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AfT-xw-6HK">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kJP-UO-j09">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="538"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5e-rq-uId">
+                                <rect key="frame" x="0.0" y="538" width="300" height="65"/>
+                                <color key="backgroundColor" red="0.5607843137254902" green="0.82745098039215681" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CHECK OUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickCheckOut:" destination="Gm3-EG-2n1" eventType="touchUpInside" id="Ped-x8-GEU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpI-W9-jmY">
+                                <rect key="frame" x="300" y="538" width="75" height="65"/>
+                                <color key="backgroundColor" red="0.29411764705882354" green="0.5607843137254902" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="vbs-Gu-Tvk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickTotoal:" destination="Gm3-EG-2n1" eventType="touchUpInside" id="I8M-xa-Oi7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kJP-UO-j09" firstAttribute="trailing" secondItem="AfT-xw-6HK" secondAttribute="trailing" id="3Bz-tj-DcY"/>
+                            <constraint firstItem="wpI-W9-jmY" firstAttribute="height" secondItem="d5e-rq-uId" secondAttribute="height" id="GlH-tu-VEY"/>
+                            <constraint firstItem="wpI-W9-jmY" firstAttribute="trailing" secondItem="AfT-xw-6HK" secondAttribute="trailing" id="Mai-i0-yCo"/>
+                            <constraint firstItem="wpI-W9-jmY" firstAttribute="leading" secondItem="d5e-rq-uId" secondAttribute="trailing" id="U6D-9R-s3p"/>
+                            <constraint firstItem="kJP-UO-j09" firstAttribute="centerX" secondItem="AfT-xw-6HK" secondAttribute="centerX" id="Ugm-hG-TAy"/>
+                            <constraint firstItem="KCH-dc-AO6" firstAttribute="top" secondItem="d5e-rq-uId" secondAttribute="bottom" id="W2a-9L-Aiy"/>
+                            <constraint firstItem="d5e-rq-uId" firstAttribute="leading" secondItem="AfT-xw-6HK" secondAttribute="leading" id="dQf-tc-J3y"/>
+                            <constraint firstItem="kJP-UO-j09" firstAttribute="leading" secondItem="AfT-xw-6HK" secondAttribute="leading" id="hVd-Kb-d15"/>
+                            <constraint firstItem="KCH-dc-AO6" firstAttribute="top" secondItem="wpI-W9-jmY" secondAttribute="bottom" id="k6t-Mi-cDv"/>
+                            <constraint firstItem="wpI-W9-jmY" firstAttribute="width" secondItem="AfT-xw-6HK" secondAttribute="width" multiplier="0.2" id="rU9-TF-gg6"/>
+                            <constraint firstItem="wpI-W9-jmY" firstAttribute="top" secondItem="kJP-UO-j09" secondAttribute="bottom" id="rVE-6Z-Z5v"/>
+                            <constraint firstItem="kJP-UO-j09" firstAttribute="top" secondItem="AfT-xw-6HK" secondAttribute="topMargin" id="s0Z-2d-UJH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CART" id="aBQ-yy-Uvh">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="SQs-hW-WRA">
+                            <connections>
+                                <action selector="didClickClose:" destination="Gm3-EG-2n1" id="s0T-6A-ygT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cartTableView" destination="kJP-UO-j09" id="5uJ-wJ-Gib"/>
+                        <outlet property="checkOutBtn" destination="d5e-rq-uId" id="xuY-Mu-uF9"/>
+                        <outlet property="totalBtn" destination="wpI-W9-jmY" id="lL5-eP-rZO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flU-CY-FvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2640.8000000000002" y="690.40479760119945"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="OlT-kq-Jjb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bmi-Hz-IkX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u4j-Zd-KcC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="u4j-Zd-KcC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.5607843137254902" green="0.82745098039215681" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -77,6 +159,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRH-A2-4hE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="29.600000000000001" y="692.20389805097454"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eOn-zJ-ux5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pmp-Vm-HPN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Qvo-qm-dNw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Mnn-LD-Rka">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.56078431370000004" green="0.82745098039999998" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gm3-EG-2n1" kind="relationship" relationship="rootViewController" id="qRd-o8-bee"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QF-O9-3oB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759" y="690"/>
         </scene>
     </scenes>
 </document>

@@ -19,10 +19,21 @@ class MartViewModle : NSObject{
     
     
     override init() {
-        let allProducts = DBHelper.getAllProducts()
+        let allProducts = DBHelper.instance.getAllProducts()
+        let cartItems = DBHelper.instance.getCart()
+        
         for product in allProducts {
-            products.insert(ProductViewModel(product: product))
+            // Check if in cart
+            let model = ProductViewModel(product: product)
+            for cartItem in cartItems {
+                if model.product.id == cartItem.productId{
+                    model.cartQuantity.value = cartItem.quantity
+                }
+            }
+            products.insert(model)
+            
         }
+        cartCount.value = cartItems.count
     }
     
     
@@ -37,7 +48,7 @@ class MartViewModle : NSObject{
         let productVewModel = products[index]
         
         // Update the product
-        if DBHelper.updateCart(productId: productVewModel.product.id, qty: productVewModel.cartQuantity.value + 1){
+        if DBHelper.instance.updateCart(pId: productVewModel.product.id, qty: productVewModel.cartQuantity.value + 1){
             productVewModel.add()
             cartCount.value = cartCount.value + 1
         }
@@ -60,9 +71,10 @@ class MartViewModle : NSObject{
         }
         
         // Update the product
-        if DBHelper.updateCart(productId: productVewModel.product.id, qty: productVewModel.cartQuantity.value - 1){
+        if DBHelper.instance.updateCart(pId: productVewModel.product.id, qty: productVewModel.cartQuantity.value - 1){
             productVewModel.remove()
-            cartCount.value = cartCount.value - 1
+            let count = cartCount.value - 1
+            if count >= 0 { cartCount.value = count}
         }
     }
     
