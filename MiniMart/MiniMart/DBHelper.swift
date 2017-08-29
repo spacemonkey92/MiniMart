@@ -119,6 +119,7 @@ class DBHelper {
     
     
     // MARK:- Cart
+    
     func getCartQty(cproductId:String) ->Int{
         var foundQty : Int = 0
         
@@ -185,16 +186,6 @@ class DBHelper {
         }
     }
     
-    func clearCart() ->Bool{
-        
-        return true
-    }
-    
-    func removeFromCart(productId:String) ->Bool{
-        
-        return true
-    }
-    
     
     // MARK:- Demo code
     func fillDB(){
@@ -216,10 +207,13 @@ class DBHelper {
         
         for item in products{
             do {
+                // Convert to blob
                 var blob : Blob?
                 if let image = item.image?.bytes{
                     blob = Blob(bytes: image)
                 }
+                
+                // Insert
                 let insert = product.insert(id <- item.id ,name <- item.name , description <- item.description , price <- item.price , image <- blob )
                 try db!.run(insert)
                 print("added items to db")
@@ -235,9 +229,4 @@ class DBHelper {
     
 }
 
-// Data Extension
-extension Data {
-    var bytes : [UInt8]{
-        return [UInt8](self)
-    }
-}
+
