@@ -14,27 +14,39 @@ class MartViewController: UIViewController  {
     /// Views
     @IBOutlet weak var productsCollectionView: UICollectionView!
     @IBOutlet weak var cartBtn: UIBarButtonItem!
+    @IBOutlet weak var currencyBtn: UIBarButtonItem!
     
     /// Properties
     fileprivate let reuseIdentifier = "ProductCell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 10, left: 10.0, bottom: 10.0, right: 10.0)
     fileprivate let itemsPerRow: CGFloat = 2
     
+    
     // ViewModel
-    var viewModel : MartViewModle! {
+    var viewModel : MartViewModle? {
         didSet {
             bindData()
         }
     }
     let disposeBag = DisposeBag()
+    var currency : CURRENCY = CURRENCY.SGD
     
     
     
     // MARK:- Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = MartViewModle()
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        initialSetup()
+    }
+    
+    
+    func initialSetup(){
+        viewModel = MartViewModle(currency: currency)
         setupColletionView()
     }
     
@@ -42,7 +54,7 @@ class MartViewController: UIViewController  {
     
     // MARK:- Rx Swift binding
     func bindData(){
-        viewModel.cartCount.asObservable()
+        viewModel?.cartCount.asObservable()
             .subscribe(onNext: { count in
                 self.cartBtn.title = count == 0 ? "Cart" : "Cart (\(String(count)))"
             })
@@ -56,6 +68,34 @@ class MartViewController: UIViewController  {
         self.productsCollectionView.delegate = self
         self.productsCollectionView.dataSource = self
         self.productsCollectionView.alwaysBounceVertical = true
+        self.productsCollectionView.reloadData()
+    }
+    
+    // MARL:- Currency
+    func didClickSwitchCrcy(){
+        let cancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+        }
+        
+        let sgd: UIAlertAction = UIAlertAction(title: "SGD", style: .default){ action -> Void in
+            self.currency = .SGD
+            self.initialSetup()
+            self.currencyBtn.title = "SGD"
+        }
+        let usd: UIAlertAction = UIAlertAction(title: "USD", style: .default){ action -> Void in
+            self.currency = .USD
+            self.initialSetup()
+            self.currencyBtn.title = "USD"
+        }
+        
+        let optionsMenu = UIAlertController(title: "Select Currency", message: nil, preferredStyle: .actionSheet)
+        optionsMenu.addAction(sgd)
+        optionsMenu.addAction(usd)
+        optionsMenu.addAction(cancel)
+        
+        // Present the bottom sheet
+        optionsMenu.popoverPresentationController?.sourceView = self.view
+        optionsMenu.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height, width: 1.0, height: 1.0)
+        self.present(optionsMenu, animated: true, completion: nil)
     }
     
 
@@ -64,7 +104,18 @@ class MartViewController: UIViewController  {
         performSegue(withIdentifier: "viewCartSegue", sender: nil)
     }
 
+    @IBAction func didClickCurrency(_ sender: Any) {
+        didClickSwitchCrcy()
+    }
 
+    
+    // MARK:- Seguea
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewCartSegue" {
+            let cartVC = (segue.destination as! UINavigationController).topViewController as! CartViewController
+            cartVC.currency = self.currency
+        }
+    }
 
 }
 
@@ -73,13 +124,13 @@ extension MartViewController:  UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return self.viewModel.products.count
+        return self.viewModel?.products.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! MartProductCell
-        let products = viewModel.products
+        let products = viewModel!.products
         cell.viewModel = products[products.index(products.startIndex, offsetBy: indexPath.row)]
         
         // Add and remove methods
@@ -95,20 +146,22 @@ extension MartViewController:  UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     
+    
+    
     // MARK:- Cell Actions
     func didClickAdd(_ sender:UIButton){
         let index = sender.tag
-        let products = viewModel.products
+        let products = viewModel!.products
         let selectedProduct = products[products.index(products.startIndex, offsetBy: index)]
-        viewModel.add(product: selectedProduct)
+        viewModel!.add(product: selectedProduct)
         
     }
     
     func didClickRemove(_ sender:UIButton){
         let index = sender.tag
-        let products = viewModel.products
+        let products = viewModel!.products
         let selectedProduct = products[products.index(products.startIndex, offsetBy: index)]
-        viewModel.remove(product: selectedProduct)
+        viewModel!.remove(product: selectedProduct)
     }
     
 }

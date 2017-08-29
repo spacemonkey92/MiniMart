@@ -9,6 +9,7 @@ target 'MiniMart' do
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
   pod 'SQLite.swift', '~> 0.11.3'
+  pod 'Adyen'
 
   target 'MiniMartTests' do
     inherit! :search_paths

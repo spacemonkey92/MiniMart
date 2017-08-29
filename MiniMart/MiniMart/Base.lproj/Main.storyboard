@@ -44,6 +44,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GROCERIES" id="iMh-QM-jDi">
+                        <barButtonItem key="leftBarButtonItem" title="SGD" id="yvP-Hm-zlv">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="didClickCurrency:" destination="BYZ-38-t0r" id="0EU-da-eQX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="lhv-6n-JJu">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -53,6 +59,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cartBtn" destination="lhv-6n-JJu" id="9Fb-9S-wkU"/>
+                        <outlet property="currencyBtn" destination="yvP-Hm-zlv" id="l16-Dl-k8x"/>
                         <outlet property="productsCollectionView" destination="3uR-pu-ND6" id="2ML-pK-EUy"/>
                         <segue destination="pmp-Vm-HPN" kind="showDetail" identifier="viewCartSegue" id="koG-iT-y0H"/>
                     </connections>
@@ -121,6 +128,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CART" id="aBQ-yy-Uvh">
+                        <barButtonItem key="leftBarButtonItem" title="SGD" id="hmM-Ov-q4L">
+                            <connections>
+                                <action selector="didClickCurrency:" destination="Gm3-EG-2n1" id="369-3O-Mh5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Close" id="SQs-hW-WRA">
                             <connections>
                                 <action selector="didClickClose:" destination="Gm3-EG-2n1" id="s0T-6A-ygT"/>
@@ -130,6 +142,7 @@
                     <connections>
                         <outlet property="cartTableView" destination="kJP-UO-j09" id="5uJ-wJ-Gib"/>
                         <outlet property="checkOutBtn" destination="d5e-rq-uId" id="xuY-Mu-uF9"/>
+                        <outlet property="currencyBtn" destination="hmM-Ov-q4L" id="7NL-zE-UyI"/>
                         <outlet property="totalBtn" destination="wpI-W9-jmY" id="lL5-eP-rZO"/>
                     </connections>
                 </viewController>

@@ -20,6 +20,14 @@ struct Product: Equatable {
     let description: String
     let image : Data?
     
+    func getPrice(_ currency :CURRENCY) -> Double{
+        switch currency {
+        case CURRENCY.SGD:
+            return self.price
+        case CURRENCY.USD:
+            return self.price * 1.3
+        }
+    }
     
 }
 
@@ -35,4 +43,10 @@ func ==(lhs: Product, rhs: Product) -> Bool {
     
     // We consider two products as equal if their "ID" is same
     return (lhs.id == rhs.id)
+}
+
+
+public enum CURRENCY {
+    case SGD
+    case USD
 }

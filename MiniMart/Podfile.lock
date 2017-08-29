@@ -1,4 +1,27 @@
 PODS:
+  - Adyen (1.5.0):
+    - Adyen/Cards (= 1.5.0)
+    - Adyen/Core (= 1.5.0)
+    - Adyen/Ideal (= 1.5.0)
+    - Adyen/SEPADirectDebit (= 1.5.0)
+    - Adyen/UI (= 1.5.0)
+  - Adyen/Cards (1.5.0):
+    - Adyen/Core
+    - Adyen/CoreUI
+    - AdyenCSE
+  - Adyen/Core (1.5.0)
+  - Adyen/CoreUI (1.5.0):
+    - Adyen/Core
+  - Adyen/Ideal (1.5.0):
+    - Adyen/Core
+    - Adyen/CoreUI
+  - Adyen/SEPADirectDebit (1.5.0):
+    - Adyen/Core
+    - Adyen/CoreUI
+  - Adyen/UI (1.5.0):
+    - Adyen/Core
+    - Adyen/CoreUI
+  - AdyenCSE (1.0.5)
   - RxCocoa (3.6.1):
     - RxSwift (~> 3.6)
   - RxSwift (3.6.1)
@@ -7,15 +30,18 @@ PODS:
   - SQLite.swift/standard (0.11.3)
 
 DEPENDENCIES:
+  - Adyen
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - SQLite.swift (~> 0.11.3)
 
 SPEC CHECKSUMS:
+  Adyen: ed2fbcc28f1ce9883217998bd14d9dc4352216b1
+  AdyenCSE: f3af90c1d107282167fc48557cdad9c785bf8bab
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
 
-PODFILE CHECKSUM: 491b3eb858815fb703e8d1264b72336de6fab446
+PODFILE CHECKSUM: e555e6eaa049f5dc925445b51f0545436e0103bb
 
 COCOAPODS: 1.3.0

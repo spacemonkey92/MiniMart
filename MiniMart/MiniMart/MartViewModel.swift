@@ -11,20 +11,20 @@ import RxSwift
 
 /// Represent the view model of MartViewController
 
-class MartViewModle : NSObject{
+class MartViewModle{
     
     var products: Set<ProductViewModel> = [] // Assume fixed list of products
     let cartCount: Variable<Int> = Variable(0)
+    var currency : CURRENCY = CURRENCY.SGD
     
     
-    
-    override init() {
+    init(currency:CURRENCY) {
         let allProducts = DBHelper.instance.getAllProducts()
         let cartItems = DBHelper.instance.getCart()
         
         for product in allProducts {
             // Check if in cart
-            let model = ProductViewModel(product: product)
+            let model = ProductViewModel(product: product, currency: currency)
             for cartItem in cartItems {
                 if model.product.id == cartItem.productId{
                     model.cartQuantity.value = cartItem.quantity

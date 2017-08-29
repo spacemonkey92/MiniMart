@@ -43,6 +43,8 @@ class CartItemCell: UITableViewCell {
         
         self.priceDetails.text = viewModel.getPriceDetails()
         self.productName.text = viewModel.product.name
+        self.price.text = viewModel.getProductPricePretty()
+        
         
     }
     

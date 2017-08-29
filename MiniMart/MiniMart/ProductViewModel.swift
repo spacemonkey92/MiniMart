@@ -19,9 +19,11 @@ class ProductViewModel : Equatable, Hashable {
     
     let product : Product
     let cartQuantity : Variable<Int> = Variable(0)
+    var currency : CURRENCY = CURRENCY.SGD // Default SGD
     
-    init(product:Product) {
+    init(product:Product, currency:CURRENCY) {
         self.product = product
+        self.currency = currency
     }
     
     func add(){
@@ -38,7 +40,7 @@ class ProductViewModel : Equatable, Hashable {
     }
     
     func getPrice() -> Double{
-        return product.price * Double(cartQuantity.value)
+        return product.getPrice(currency) * Double(cartQuantity.value)
     }
     
     func getPricePretty() -> String {
@@ -51,7 +53,7 @@ class ProductViewModel : Equatable, Hashable {
     }
     
     func getProductPricePretty() -> String {
-        let price = String(format: "%.2f", product.price)
+        let price = String(format: "%.2f", product.getPrice(currency))
         return "$\(price)"
     }
 
@@ -68,3 +70,5 @@ class ProductViewModel : Equatable, Hashable {
 func ==(lhs: ProductViewModel, rhs: ProductViewModel) -> Bool {
     return lhs.product == rhs.product
 }
+
+

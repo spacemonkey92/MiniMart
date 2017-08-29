@@ -9,18 +9,20 @@
 import Foundation
 import RxSwift
 
-class CartViewModel : NSObject{
+class CartViewModel {
     
     let cartProducts : Variable<Set<ProductViewModel>> = Variable([])
     let cartTotal: Variable<Double> = Variable(0)
+    var currency : CURRENCY = CURRENCY.SGD
     
-    override init() {
+    init(currency:CURRENCY) {
         
         let cartItems = DBHelper.instance.getCart()
+        self.currency = currency
         
         for cartItem in cartItems{
             if let product = DBHelper.instance.getProduct(cid: cartItem.productId){
-                let productViewModel = ProductViewModel(product: product)
+                let productViewModel = ProductViewModel(product: product, currency: currency)
                 productViewModel.cartQuantity.value = cartItem.quantity
                 cartProducts.value.insert(productViewModel)
             }
@@ -31,7 +33,7 @@ class CartViewModel : NSObject{
     func totalCost() -> Double {
         return cartProducts.value.reduce(0) {
             runningTotal, product in
-            return runningTotal + product.product.price
+            return runningTotal + product.product.getPrice(currency)
         }
     }
     
