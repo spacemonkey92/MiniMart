@@ -49,7 +49,7 @@ class ProductViewModel : Equatable, Hashable {
     }
     
     func getPriceDetails() ->String{
-        return "\(cartQuantity.value) x \(getPricePretty())"
+        return "\(cartQuantity.value) x \(getProductPricePretty())"
     }
     
     func getProductPricePretty() -> String {
